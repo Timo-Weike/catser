@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src\Catser.UI\Catser.UI.csproj" />
+  <Properties Name="Visual Studio">
+    <Property Name="OpenWith" Value="17" />
+  </Properties>
+</Solution>

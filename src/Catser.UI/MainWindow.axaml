@@ -5,6 +5,7 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         xmlns:vm="using:Catser.UI.ViewModels"
         x:Class="Catser.UI.MainWindow"
+        ExtendClientAreaToDecorationsHint="True"
         Title="Catser">
 
 
@@ -13,37 +14,28 @@
   </Design.DataContext>
 
   <DockPanel >
-    <!--<ExperimentalAcrylicBorder IsHitTestVisible="False">
-      <ExperimentalAcrylicBorder.Material>
-        <ExperimentalAcrylicMaterial
-            BackgroundSource="Digger"
-            TintColor="Black"
-            TintOpacity="1"
-            MaterialOpacity="1" />
-      </ExperimentalAcrylicBorder.Material>
 
 
 
-    </ExperimentalAcrylicBorder>-->
 
-    <!--<Border BorderThickness="1" DockPanel.Dock="Top" IsHitTestVisible="False">
+    <Border BorderThickness="1" DockPanel.Dock="Top" IsHitTestVisible="False">
       <StackPanel Margin="1" Height="30" Spacing="10" Orientation="Horizontal"  HorizontalAlignment="Left" VerticalAlignment="Top">
-        <Image Source="avares://Catser.Ui/Assets/app-icon.ico" Margin="7,0,0,0" Height="25" VerticalAlignment="Center"/>
-        --><!--<PathIcon Data="{StaticResource app_icon}" Margin="10,0,0,0" Height="25" VerticalAlignment="Center"/>--><!--
+        <!--<Image Source="avares://Catser.Ui/Assets/app-icon.ico" Margin="7,0,0,0" Height="25" VerticalAlignment="Center"/>-->
+        <PathIcon Data="{StaticResource app_icon}" Margin="10,0,0,0" Height="25" VerticalAlignment="Center"/>
         <TextBlock Text="{Binding $parent[Window].Title}" VerticalAlignment="Center"/>
       </StackPanel>
-    </Border>-->
+    </Border>
 
     <Menu DockPanel.Dock="Top" Height="20">
       <MenuItem Header="File">
         <MenuItem Header="_New Client Tab" HotKey="Ctrl+N"/>
         <Separator />
         <MenuItem Header="_Save" HotKey="Ctrl+S"/>
-        <!--<MenuItem Header="Save _as" Command="{Binding SaveSelectedTabAs}" HotKey="Ctrl+Shift+S"/>-->
+        <MenuItem Header="Save _as" Command="{Binding SaveSelectedTabAs}" HotKey="Ctrl+Shift+S"/>
       </MenuItem>
-      <!--<MenuItem Header="Help">
+      <MenuItem Header="Help">
         
-      </MenuItem>-->
+      </MenuItem>
     </Menu>
 
     <!--<SplitView Name="splitPane" IsPaneOpen="True" OpenPaneLength="200" DisplayMode="CompactInline">
@@ -76,6 +68,6 @@
         </Grid>
       </SplitView.Content>
     </SplitView>
-
   </DockPanel>
+
 </Window>
